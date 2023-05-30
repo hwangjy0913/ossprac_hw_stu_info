@@ -1,7 +1,8 @@
 version : "3.0" # docker compose 파일의 버전
 
 services:
-  python-app:
+  python-app: #밑의 build에 의해 생성된 image에 의해 실행될 컨테이너 이름
+   image: jaey0913/ossprac_hw6_jenkins # 밑의 build에 지정된 dockerfile에 의해 만들어질 이미지
    build: . #Dockerfile이 있는 위치
    ports: #local과 도커 컨테이너 안의 포트를 이어줌(이거 없으면 안 됨 - 브라우저에서 어플 실행 안 됨!)
       - "80:80"
